@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project1</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scrypt.js"></script>
+   
+</head>
+
+<body>
+  <div class="page">
+    <nav class="page__menu menu">
+    <ul class="menu__list r-list">
+        <li class="menu__group"><a href="../html/index.html" class="menu__link r-link text-underlined">Главная</a></li>
+        <li class="menu__group"><a href="../html/about.html" class="menu__link r-link text-underlined">О нас</a></li>
+        <li class="menu__group"><a href="../html/contacts.html" class="menu__link r-link text-underlined">Контакты</a></li>
+        <li class="menu__group"><a href="../html/help.html" class="menu__link r-link text-underlined">Помощь</a></li>
+        <li class="menu__group"><a href="../html/order.html" class="menu__link r-link text-underlined">Заказать</a></li>
+    </ul>
+        </nav>
+        <nav class="page__menu page__custom-settings menu">
+          <ul class="menu__list r-list">
+            <li class="menu__group"><a href="../html/portfolio.html" class="menu__link r-link text-underlined">Портфолио</a></li>
+            <li class="menu__group"><a href="" class="menu__link r-link text-underlined" target="_blank">Гра "World of survivors"</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main>
+        <h1>Микро-программы<h1>
+        <h2 class="text-gray">Вычисления</h1>
+        <hr>
+        
+       
+        <div class="panel">
+          <h3>Калькулятор делает вычисления</h3>
+            <label> Введите колличество топлива</label>
+            <input id="inputFuel" type="number" placeholder= "Ресурсы"
+            oninput ="FuelEnergyConverter(this.value)" onchange="FuelEnergyConverter(this.value)">
+
+            <p> Колличество полученой  энергии(Квт) от древесины(кг): <span id="outputWood"></span> </p>
+            <p> Колличество полученой  энергии(Квт) от угля(кг): <span id="outputCoal"></span> </p>
+            <p> Колличество полученой  энергии(Квт) от жидкого топлива(л): <span id="outputLiquidFuel"></span> </p>       
+        </div> 
+           <br>
+           
+        <div class="panel">
+          <h3>Когда рубить дерево</h3>
+          <label for="wood-height">Укажите дерево которое нашли (м):</label> 
+          <input type="wood-height-input" id="wood-height">
+            
+          <button onclick="know()">Узнайте</button>
+          <p><span id="wood-result"></span></p>
+        </div>
+     
+            <br>
+            <div class="panel">
+              <h3>Итоговая оценка студента</h3>
+              <label for="exam-grade">Сколько балов вы набрали:</label> 
+              <input type="entering-an-exam-grade" id="exam-grade">
+              
+              <label for="projects-amount">Сколько проэктов вы сделали:</label>   
+              <input type="entering-the-number-of-projects" id="projects-amount">
+            
+              <button onclick="studentScores()">Узнайте</button>
+              <p><span id="student's-final-grade"></span></p>
+            </div>
+            <br>
+ 
+            <br>
+            <div class="panel">
+              <h3>Сумма последовательности чисел</h3>
+              <label for="sequence-sum-start">Введите первое число:</label> 
+              <input type="text2" id="sequence-sum-start">
+              
+              <label for="sequence-sum-end">Введите конечное число:</label>   
+              <input type="text2"id="sequence-sum-end">
+            
+              <button onclick="handleSecuenceSumBtnClick()">Узнайте</button>
+              <p><span id="sequence-sum-result"></span></p>
+            </div>
+            <br>  
+            
+            <div class="panel">
+            <h3>Лоторея</h3>
+            <button onclick="f1()">БАБЛО</button>
+            <p id = "out"></td> <p> 
+            </div>
+            <br>
+      </main>
+</body>
+</html>
+
